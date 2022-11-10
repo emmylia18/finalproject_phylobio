@@ -1,0 +1,92 @@
+---
+title: "finalproject"
+output:
+  html_document: default
+  pdf_document: default
+date: "2022-11-09"
+---
+
+
+```{r setup}
+
+library(geomorph)
+library(geiger)
+library(ape)
+library(knitr)
+setwd("C:/Users/18034/Dropbox/Senior Year/Phylogenetic Biology/Final Project")
+
+```
+
+```{r}
+
+#identifying file path
+file.path("C:\\Users\\18034\\Dropbox\\Senior Year\\Phylogenetic Biology\\Final Project\\simulation.tps")
+
+#reading and plotting the tps file, while contains the 3D landmark data
+SimulationData <- readland.tps("simulation.tps", specID = "ID")
+plot(SimulationData)
+
+```
+```{r}
+
+#aligning and scaling the landmark data - accounting for different sizes of bones and reorienting the shape around the origin
+Simulationgpa <- gpagen(SimulationData)
+plot(Simulationgpa)
+
+```
+
+``` {r}
+
+#using an established tetrapod tree (Jetz & Pyron 2018)
+jetz.tree = read.tree("amph_shl_new.tre")
+
+#identifying tips of interest
+plethodontidae <- c("Aneides_aeneus","Aneides_hardii","Aneides_lugubris","Batrachoseps_pacificus","Bolitoglossa_lincolni", "Bolitoglossa_mexicana", "Desmognathus_fuscus", "Ensatina_eschscholtzii", "Eurycea_lucifuga", "Eurycea_quadridigitata", "Hemidactylium_scutatum", "Hydromantes_platycephalus", "Plethodon_cheoah", "Plethodon_cinereus", "Plethodon_dunni", "Plethodon_elongatus", "Plethodon_glutinosus", "Thorius_boreas")
+
+plethodontidae
+
+#pruning the tree to tips of interest
+pr.jetztree <- keep.tip(jetz.tree, plethodontidae)
+
+plot(pr.jetztree)
+
+
+```
+
+
+```{r}
+
+#visualizing feeding types
+feeding.behavior = data.frame(
+  species = c("Aneides_aeneus","Aneides_hardii","Aneides_lugubris","Batrachoseps_pacificus","Bolitoglossa_lincolni", "Bolitoglossa_mexicana", "Desmognathus_fuscus", "Ensatina_eschscholtzii", "Eurycea_lucifuga", "Eurycea_quadridigitata", "Hemidactylium_scutatum", "Hydromantes_platycephalus", "Plethodon_cheoah", "Plethodon_cinereus", "Plethodon_dunni", "Plethodon_elongatus", "Plethodon_glutinosus", "Thorius_boreas"),
+  feeding.type = c("m","m","m","b","b","b","m","b","b","b","b","b","m","m","m","m","m","b"))
+
+
+#plotting feeding types
+feeding.plot = ggtree( pr.jetztree ) %<+% feeding.behavior + 
+  geom_tiplab( fontface = "italic", offset=0.02 ) +
+  xlim(0, 0.5) +
+  geom_tippoint( aes(colour=feeding.type), size=3, alpha=5 )
+
+feeding.plot
+
+
+```
+
+```{r}
+
+#creating a data frame of the landmark data, with reference to the Jetz phylogeny
+gdf <- geomorph.data.frame(Simulationgpa, phy = pr.jetztree)
+attributes(gdf)
+
+#performing PGLS with the dataset and phylogeny
+simulationPGLS <- procD.pgls(coords ~ Csize, phy=pr.jetztree, iter=999, data=gdf)
+anova(simulationPGLS)
+summary(simulationPGLS)
+```
+
+
+
+
+```{r}
+#note to henry: i want to add some sort of ggplot that puts the feeding behavior (like in the previous plot) against a gradient of scapula shape. im thinking i can probably do it with ggplot, and maybe ill just convert one of the landmark pairs to a scalar quality and plot that? would love to hear your thoughts!
