@@ -181,4 +181,3 @@ summary(simulationPGLS)
 
 
 ```{r}
-#note to henry: i want to add some sort of ggplot that puts the feeding behavior (like in the previous plot) against a gradient of scapula shape. im thinking i can probably do it with ggplot, and maybe ill just convert one of the landmark pairs to a scalar quality and plot that? would love to hear your thoughts! I also dont know if im running the pgls right, like if im actually including variables of interest, so pls lmk
