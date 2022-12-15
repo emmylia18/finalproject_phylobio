@@ -24,10 +24,12 @@ My scapula data was obtained from Morphosource. I requested approximately 20 CT 
 
 
 ![Untitled](https://user-images.githubusercontent.com/90157894/207922956-ee0e650c-7643-4889-b0b3-f9d6f7240cca.png)
+
 **Figure 1:** The 3D mesh of the scapula of *Aneides lugubris*, a muscular feeder.
 
 
 ![image](https://user-images.githubusercontent.com/90157894/207924377-5780050b-0b6e-45d0-ae05-dfbeac0f26f3.png)
+
 **Figure 2:** The 3D mesh of the scapula of *Ensatina eschscholtzii*, a ballistic feeder.
 
 
@@ -35,6 +37,7 @@ After extracting the meshes, I used the program Blender to measure linear featur
 
 
 ![Untitled-labeled features](https://user-images.githubusercontent.com/90157894/207926424-5ea666fe-bbc9-4a3e-90b3-501e8265817e.png)
+
 **Figure 3:** The scapula of *Aneides lugubris* in the Blender interface. The acromion process and coracoid process are labeled. 
 
 
@@ -46,6 +49,7 @@ The variable of feeding mode was included binarily, such that a value of "0" ind
 
 
 [INSERT IMAGE HERE]
+
 **Figure 4:** The scapula of *Aneides lugubris* in the Blender interface. The “length”, “angle”, and “distance” variables are labeled.
 
 
@@ -58,10 +62,12 @@ In order to trace evolution within the *Plethodontidae* family, I decided to sel
 
 
 ![image](https://user-images.githubusercontent.com/90157894/207920620-490ec27b-0478-46ca-9b21-517092195cfe.png)
+
 **Figure 5**: The complete amphibian tree of life (Pyron & Jetz, 2018)
 
 
 ![image](https://user-images.githubusercontent.com/90157894/207946802-90770cb2-6f22-44df-bea6-61eb3ec93df3.png)
+
 **Figure 6**: Pruned, unrooted amphibian tree of life, showing only the 18 species of interest (Pyron & Jetz, 2018)
 
 
@@ -76,7 +82,25 @@ By combining the pruned *Plethodontidae* phylogeny with continuous trait data, I
 
 ## Results
 
-The tree in Figure 1...
+*Aim One*
+
+In order to plot scapula variation along a phylogeny, I began with a vector establishing my species of interest (**Figure 7**). I sampled 9 muscular feeders and 9 ballistic feeders. I mapped this variation in feeding mode onto the pruned tree; blue dots indicate muscle-powered feeders, while orange dots indicate ballistic feeders (**Figure 8**).
+
+
+![image](https://user-images.githubusercontent.com/90157894/207950193-dece324f-993a-4dbc-bc89-2192602a3e55.png)
+
+**Figure 7**: The vector *Plethodontidae*, which includes 18 species of interest (all of which belong to the lungless salamanders).
+
+
+![image](https://user-images.githubusercontent.com/90157894/207950744-c2a69795-9df6-4d7c-8587-17cfa512f4ad.png)
+
+**Figure 8**: Feeding mode plotted onto the pruned amphibian tree (Pyron & Jetz, 2018). Blue dots indicate muscular feeders and orange dots indicate ballistic feeders.
+
+
+
+
+
+
 
 ## Discussion
 
