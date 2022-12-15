@@ -19,31 +19,41 @@ This is part of a larger project that I will present at SICB 2023.
 ## Methods
 
 *Data Collection*
+
 My scapula data was obtained from Morphosource. I requested approximately 20 CT scans of different *Plethodontidae* species from museum collections across the country. After obtaining the .tiff files from collections managers, I refined the scans and isolated the species’ right pectoral girdles. Using Volume Graphics Studio (VG Studio), I spent the summer of 2022 segmenting the scapulae, humeri, radii, and ulnarae of the 20 specimens. I extracted the meshes of the scapulae as 3D objects. These extractions are digital replicas of the scapulae, which can then be compared across species.
 
 
 ![Untitled](https://user-images.githubusercontent.com/90157894/207922956-ee0e650c-7643-4889-b0b3-f9d6f7240cca.png)
 **Figure 1:** The 3D mesh of the scapula of *Aneides lugubris*, a muscular feeder.
 
+
 ![image](https://user-images.githubusercontent.com/90157894/207924377-5780050b-0b6e-45d0-ae05-dfbeac0f26f3.png)
 **Figure 2:** The 3D mesh of the scapula of *Ensatina eschscholtzii*, a ballistic feeder.
 
+
 After extracting the meshes, I used the program Blender to measure linear features along the surface of the scapula. In particular, I focused on the acromion process and the coracoid process, which are both major sites of muscle attachment in amphibians (INSERT SOURCE HERE – GOOGLE IT, IT’S THE OLD ONE). Because skeletal attachment sites can reflect the size of the muscle(s) to which they’re attached, these varying surfaces provide an excellent proxy for assessing lunging capacity.
+
 
 ![Untitled-labeled features](https://user-images.githubusercontent.com/90157894/207926424-5ea666fe-bbc9-4a3e-90b3-501e8265817e.png)
 **Figure 3:** The scapula of *Aneides lugubris* in the Blender interface. The acromion process and coracoid process are labeled. 
 
+
 I used three variables to summarize the shape of the acromion-coracoid projection: “length”, “angle”, and “distance”. “Length” refers to the length of the acromion process, measured from origin to tip. “Angle” refers to the approximate angle formed by the acromion process and coracoid process. This angle does not include any flaring or tapering that appears at the end of the processes. Lastly, “distance” describes the length of the space between the tip of the acromion process and the tip of the coracoid process. Therefore, it includes information about flaring that is not described by the “angle” variable.
+
 I also incorporated the variable “proportion”, which is the value of “distance” divided by “length”. It is designed to assess the width of the entire acromion-coracoid projection relative to the length of the acromion. 
+
 
 [INSERT IMAGE HERE]
 **Figure 4:** The scapula of *Aneides lugubris* in the Blender interface. The “length”, “angle”, and “distance” variables are labeled.
+
 
 Though some amphibian research has described the role of the pectoral girdle in skeletal or muscular function, few studies have focused on *Caudata* specifically. The variables selected to describe scapula variation in this study were chosen based on observation of shape variation in *Plethodontidae*. Additionally, the acromion and coracoid have been linked to trapezium and XXXXX muscular function in *Rana*, hinting at a similar function for lungless salamanders.
 
 
 **Tree Mapping**
+
 In order to trace evolution within the *Plethodontidae* family, I decided to select and prune a tree from the *Caudata*. To this end, I used an amphibian tree of life created by Pyron & Jetz (2018). I limited my total number of segmented specimens to the species that were included in the tree, which left me with 18 species. 
+
 
 ![image](https://user-images.githubusercontent.com/90157894/207920620-490ec27b-0478-46ca-9b21-517092195cfe.png)
 **Figure 5**: The complete amphibian tree of life (Pyron & Jetz, 2018)
