@@ -97,7 +97,22 @@ In order to plot scapula variation along a phylogeny, I began with a vector esta
 **Figure 8**: Feeding mode plotted onto the pruned amphibian tree (Pyron & Jetz, 2018). Blue dots indicate muscular feeders and orange dots indicate ballistic feeders.
 
 
+Next, I plotted the variables that describe scapula shape onto the tree. This includes "length" (**Figure 9**), "angle" (**Figure 10**), and "distance" (**Figure 11**). The "length" variable does not vary much along the phylogeny, though slightly larger length values seem characteristic of muscle-powered feeders. The "angle" variable does not change in a discernable way with feeding mode. *Bolitoglossa mexicana* has an exceptionally large angle, with a value over 100, compared to the other taxa. The "distance" variable also seems to skew slightly larger for the muscle-powered feeders.
 
+
+![image](https://user-images.githubusercontent.com/90157894/207951175-04d119f1-c5d6-4319-b27c-8b36b402f1a2.png)
+
+**Figure 9**: The length of the acromion process ("length") plotted onto the pruned amphibian tree (Pyron & Jetz, 2018).
+
+
+![image](https://user-images.githubusercontent.com/90157894/207951633-9699e1d0-666e-4752-8db2-ad1302700e7d.png)
+
+**Figure 10**: The angle between the acromion process and the coracoid process ("angle") plotted onto the pruned amphibian tree (Pyron & Jetz, 2018).
+
+
+![image](https://user-images.githubusercontent.com/90157894/207951698-7a0f1e39-e3dd-4d07-8722-e45eeae6935f.png)
+
+**Figure 11**: The distance between the tips of the acromion process and the coracoid process ("distance") plotted onto the pruned amphibian tree (Pyron & Jetz, 2018).
 
 
 
