@@ -52,11 +52,15 @@ Though some amphibian research has described the role of the pectoral girdle in 
 
 **Tree Mapping**
 
-In order to trace evolution within the *Plethodontidae* family, I decided to select and prune a tree from the *Caudata*. To this end, I used an amphibian tree of life created by Pyron & Jetz (2018). I limited my total number of segmented specimens to the species that were included in the tree, which left me with 18 species. 
+In order to trace evolution within the *Plethodontidae* family, I decided to select an amphibian phylogeny from the scientific literature and prune it for my species of interest. To this end, I used an amphibian tree of life created by Pyron & Jetz (2018) (**Figure 5**). I limited my total number of segmented specimens to the species that were included in the tree, which left me with 18 tips (**Figure 6**).
 
 
 ![image](https://user-images.githubusercontent.com/90157894/207920620-490ec27b-0478-46ca-9b21-517092195cfe.png)
 **Figure 5**: The complete amphibian tree of life (Pyron & Jetz, 2018)
+
+
+![image](https://user-images.githubusercontent.com/90157894/207946802-90770cb2-6f22-44df-bea6-61eb3ec93df3.png)
+**Figure 6**: Pruned, unrooted amphibian tree of life, showing only the 18 species of interest (Pyron & Jetz, 2018)
 
 
 
