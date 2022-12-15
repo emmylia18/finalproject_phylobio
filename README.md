@@ -42,6 +42,8 @@ I used three variables to summarize the shape of the acromion-coracoid projectio
 
 I also incorporated the variable “proportion”, which is the value of “distance” divided by “length”. It is designed to assess the width of the entire acromion-coracoid projection relative to the length of the acromion. 
 
+The variable of feeding mode was included binarily, such that a value of "0" indicates ballistic feeding and "1" indicates muscular feeding.
+
 
 [INSERT IMAGE HERE]
 **Figure 4:** The scapula of *Aneides lugubris* in the Blender interface. The “length”, “angle”, and “distance” variables are labeled.
@@ -50,7 +52,7 @@ I also incorporated the variable “proportion”, which is the value of “dist
 Though some amphibian research has described the role of the pectoral girdle in skeletal or muscular function, few studies have focused on *Caudata* specifically. The variables selected to describe scapula variation in this study were chosen based on observation of shape variation in *Plethodontidae*. Additionally, the acromion and coracoid have been linked to trapezium and XXXXX muscular function in *Rana*, hinting at a similar function for lungless salamanders.
 
 
-**Tree Mapping**
+*Tree Mapping*
 
 In order to trace evolution within the *Plethodontidae* family, I decided to select an amphibian phylogeny from the scientific literature and prune it for my species of interest. To this end, I used an amphibian tree of life created by Pyron & Jetz (2018) (**Figure 5**). I limited my total number of segmented specimens to the species that were included in the tree, which left me with 18 tips (**Figure 6**).
 
@@ -63,6 +65,11 @@ In order to trace evolution within the *Plethodontidae* family, I decided to sel
 **Figure 6**: Pruned, unrooted amphibian tree of life, showing only the 18 species of interest (Pyron & Jetz, 2018)
 
 
+*Phylogenetic Methods*
+
+By combining the pruned *Plethodontidae* phylogeny with continuous trait data, I hoped to
+    *1. Map the evolution of scapula scalar data along the phylogeny
+    2. Use phylogenetic generalized least-squares analysis to determine the correlation between feeding mode and various scapula features.*
 
 
 ## Results
