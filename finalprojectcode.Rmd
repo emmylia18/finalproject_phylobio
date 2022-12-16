@@ -1,0 +1,309 @@
+---
+title: "finalproject"
+output:
+  html_document: default
+  pdf_document: default
+date: "2022-12-07"
+---
+
+
+```{r setup}
+
+
+
+#For phylogenetic generalized least squares analysis, 
+#I will be using the libraries "geiger" and "nlme" (and
+#by extension, "ape")
+
+library(ape)
+library(geiger)
+library(nlme)
+
+#I am also using "ggtree", "ggplot2", and "knitr" 
+#for graphic visualization and phylogenetic analysis.
+
+library(ggplot2)
+library(knitr)
+library(ggtree)
+
+#Future iterations of this project will use the package 
+#"geomorph" for geometric morphometric analysis of 3D 
+#shapes.
+
+#This line of code sets the working directory, and is 
+#specific to whichever folder holds the files containing 
+#relevant data.
+
+setwd("C:/Users/18034/Dropbox/Senior Year/Phylogenetic Biology/Final Project")
+
+```
+
+
+``` {r}
+
+#This function introduces an established amphibian 
+#tree for comparison against landmark data (Jetz & 
+#Pyron 2018). 
+
+jetz.tree = read.tree("amph_shl_new.tre")
+ggtree(jetz.tree, layout="circular")
+
+```
+
+```{r}
+
+#It includes many species within all 
+#three major clades of amphibian: Anura, Caudata, 
+#and Gymnophiona. So, it will need to be pruned.
+
+#This function creates a vector to isolate the tips
+#of interest. In this case, that includes all
+#Plethodontidae species that are both included on 
+#the tree and are available for segmentation in 
+#online databases - namely Morphosource.
+
+plethodontidae <- c("Aneides_aeneus","Aneides_hardii","Aneides_lugubris","Batrachoseps_pacificus","Bolitoglossa_lincolni", "Bolitoglossa_mexicana", "Desmognathus_fuscus", "Ensatina_eschscholtzii", "Eurycea_lucifuga", "Eurycea_quadridigitata", "Hemidactylium_scutatum", "Hydromantes_platycephalus", "Plethodon_cheoah", "Plethodon_cinereus", "Plethodon_dunni", "Plethodon_elongatus", "Plethodon_glutinosus", "Thorius_boreas")
+
+print(plethodontidae)
+
+#This function prunes the amphibian tree, keeping 
+#only the tips of interest. That includes all 
+#species within our defined "plethodontidae" vector.
+
+pr.jetztree <- keep.tip(jetz.tree, plethodontidae)
+
+#This function plots the newly pruned tree.
+
+plot(pr.jetztree)
+
+```
+
+
+```{r}
+
+#visualizing feeding types
+
+#Here, the data.frame function is used to create
+#a dataset of species of interest and their 
+#respective feeding mechanisms (muscular 
+#(indicated by "m") or ballistic (indicated by 
+#"b")).
+
+feeding.behavior = data.frame(
+  species = c("Aneides_aeneus","Aneides_hardii","Aneides_lugubris","Batrachoseps_pacificus","Bolitoglossa_lincolni", "Bolitoglossa_mexicana", "Desmognathus_fuscus", "Ensatina_eschscholtzii", "Eurycea_lucifuga", "Eurycea_quadridigitata", "Hemidactylium_scutatum", "Hydromantes_platycephalus", "Plethodon_cheoah", "Plethodon_cinereus", "Plethodon_dunni", "Plethodon_elongatus", "Plethodon_glutinosus", "Thorius_boreas"),
+  feeding.type = c("m","m","m","b","b","b","m","b","b","b","b","b","m","m","m","m","m","b"))
+
+
+#This function plots the pruned tree with the 
+#data set "feeding.behavior", mapping character 
+#states onto the tip nodes using known information.
+
+feeding.plot = ggtree( pr.jetztree ) %<+% feeding.behavior + 
+  geom_tiplab( fontface = "italic", offset=0.02 ) +
+  xlim(0, 0.5) +
+  geom_tippoint( aes(colour=feeding.type), size=3, alpha=5 )
+
+feeding.plot
+
+
+```
+```{r}
+#plotting length landmark data
+
+#As above, the data.frame function creates
+#a data set of species of interest and a
+#trait of interest. In this case, it is 
+#the length of the acromion process in 
+#each specimen, a continuous variable. I 
+#extracted this information using the 
+#measure tool in Blender, using values 
+#from 3D scans of the scapulae that I 
+#segmented last summer.
+
+length.scapula = data.frame(
+  species = c("Aneides_aeneus","Aneides_hardii","Aneides_lugubris","Batrachoseps_pacificus","Bolitoglossa_lincolni", "Bolitoglossa_mexicana", "Desmognathus_fuscus", "Ensatina_eschscholtzii", "Eurycea_lucifuga", "Eurycea_quadridigitata", "Hemidactylium_scutatum", "Hydromantes_platycephalus", "Plethodon_cheoah", "Plethodon_cinereus", "Plethodon_dunni", "Plethodon_elongatus", "Plethodon_glutinosus", "Thorius_boreas"),
+  length.value = c(1.091,1.054,2.061,0.849,0.625,0.225,0.726,1.668,1.402,0.795,0.717,0.778,1.500,0.504,1.548,1.214,1.679,0.579))
+
+
+#This function plots the pruned tree with the 
+#data set "length.scapula", mapping the length 
+#of the acromion process onto the tip nodes 
+#using known information.
+
+length.plot = ggtree( pr.jetztree ) %<+% length.scapula + 
+  geom_tiplab( fontface = "italic", offset=0.02 ) +
+  xlim(0, 0.5) +
+  geom_tippoint( aes(colour=length.value), size=3, alpha=5 )
+
+length.plot
+
+```
+
+```{r}
+#plotting angle landmark data
+
+#As above, the data.frame function creates
+#a data set of species of interest and a
+#trait of interest. In this case, it is 
+#the angle between the acromion process 
+#and the coracoid process in each
+#specimen, a continuous variable. I 
+#extracted this information using the 
+#measure tool in Blender, using values 
+#from 3D scans of the scapulae that I 
+#segmented last summer.
+
+angle.scapula = data.frame(
+  species = c("Aneides_aeneus","Aneides_hardii","Aneides_lugubris","Batrachoseps_pacificus","Bolitoglossa_lincolni", "Bolitoglossa_mexicana", "Desmognathus_fuscus", "Ensatina_eschscholtzii", "Eurycea_lucifuga", "Eurycea_quadridigitata", "Hemidactylium_scutatum", "Hydromantes_platycephalus", "Plethodon_cheoah", "Plethodon_cinereus", "Plethodon_dunni", "Plethodon_elongatus", "Plethodon_glutinosus", "Thorius_boreas"),
+  angle.value = c(43,42,55,50,40,124,58,27,41,46,66,63,40,45,40,48,29,39))
+
+
+#This function plots the pruned tree with the 
+#data set "angle.scapula", mapping the measured 
+#angle onto the tip nodes using known information.
+
+angle.plot = ggtree( pr.jetztree ) %<+% angle.scapula + 
+  geom_tiplab( fontface = "italic", offset=0.02 ) +
+  xlim(0, 0.5) +
+  geom_tippoint( aes(colour=angle.value), size=3, alpha=5 )
+
+angle.plot
+
+```
+
+```{r}
+#plotting angle landmark data
+
+#As above, the data.frame function creates
+#a data set of species of interest and a
+#trait of interest. In this case, it is 
+#the distance between the tips of the acromion 
+#process and the coracoid process in each
+#specimen, a continuous variable. I 
+#extracted this information using the 
+#measure tool in Blender, using values 
+#from 3D scans of the scapulae that I 
+#segmented last summer.
+
+distance.scapula = data.frame(
+  species = c("Aneides_aeneus","Aneides_hardii","Aneides_lugubris","Batrachoseps_pacificus","Bolitoglossa_lincolni", "Bolitoglossa_mexicana", "Desmognathus_fuscus", "Ensatina_eschscholtzii", "Eurycea_lucifuga", "Eurycea_quadridigitata", "Hemidactylium_scutatum", "Hydromantes_platycephalus", "Plethodon_cheoah", "Plethodon_cinereus", "Plethodon_dunni", "Plethodon_elongatus", "Plethodon_glutinosus", "Thorius_boreas"),
+  distance.value = c(0.798,0.727,1.779,0.611,0.691,0.531,0.674,1.005,0.997,0.640,0.706,0.829,1.039,0.550,1.004,1.156,0.849,0.371))
+
+
+#This function plots the pruned tree with the 
+#data set "distance.scapula", mapping the measured 
+#distance onto the tip nodes using known information.
+
+distance.plot = ggtree( pr.jetztree ) %<+% distance.scapula + 
+  geom_tiplab( fontface = "italic", offset=0.02 ) +
+  xlim(0, 0.5) +
+  geom_tippoint( aes(colour=distance.value), size=3, alpha=5 )
+
+distance.plot
+
+
+```
+
+
+```{r}
+
+#Extracting raw data from a .csv
+
+#This function allows us to access the 
+#csv file where the raw scalar data is stored.
+
+scalardata<-read.csv("scalardata.csv",row.names=1)
+
+#These lines of code create R variables for 
+#the different columns in the csv file - length, 
+#angle, distance, and feeding type.
+
+#I currently do not have values for SVL, or 
+#snout-ventral length, of the specimens. Therefore, 
+#I am unable to constrain for body size. As a 
+#temporary solution, I've introduced a fifth variable: 
+#proportion. This is equal to distance divided by length. 
+#Though SVL would be far better, I am using this 
+#proportion variable as a way to represent the shape of 
+#the scapula with a single, relativized value.
+
+  length<-scalardata$length
+  angle<-scalardata$angle
+  distance<-scalardata$distance
+  proportion<-scalardata$proportion
+  feedingtype<-scalardata$feeding_type
+  
+#For feedingtype, a value of 1 indicates muscular 
+  #feeders while a value of 0 indicates ballistic feeders.
+  
+#This function creates a data matrix in R that 
+#includes all the information in the csv file. 
+#The PGLS analyses will pull data from this matrix.
+  
+  DF.scalarmodel<-data.frame(length,angle,distance,proportion,feedingtype,row.names=row.names(scalardata))
+  DF.scalarmodel
+
+```
+
+```{r}
+
+#PGLS of acromion process length with feeding mode
+
+#This function performs a PGLS analysis of 
+#length and feeding mode. It is effectively 
+#just a regression that controls for ancestry 
+# - according to a particular phylogeny.
+
+#feedingtype~length indicates the two variables 
+#to be correlated. data=DF.scalarmodel assigns
+#the matrix on which the PGLS will be performed.
+#correlation=corBrownian(1, phy=pr.jetztree) 
+#assigns a Brownian model of evolution to the 
+#given ancestry, and indicates that the PGLS 
+#should be constrained by the pruned amphibian 
+#tree. 
+
+pgls.length.scalarmodel<-gls(feedingtype~length, data=DF.scalarmodel, correlation=corBrownian(1,phy=pr.jetztree), method="ML")
+
+summary(pgls.length.scalarmodel)
+
+```
+```{r}
+
+#PGLS of acromion process/coracoid process angle with feeding mode
+
+#This function performs a PGLS 
+#analysis of angle and feeding mode. 
+
+pgls.angle.scalarmodel<-gls(feedingtype~angle, data=DF.scalarmodel, correlation=corBrownian(1,phy=pr.jetztree), method="ML")
+summary(pgls.angle.scalarmodel)
+
+```
+
+```{r}
+
+#PGLS of acromion process/coracoid process distance with feeding mode
+
+#This function performs a PGLS 
+#analysis of distance and feeding 
+#mode. 
+
+pgls.distance.scalarmodel<-gls(feedingtype~distance, data=DF.scalarmodel, correlation=corBrownian(1,phy=pr.jetztree), method="ML")
+summary(pgls.distance.scalarmodel)
+
+
+```
+
+```{r}
+#PGLS of distance/length ("proportion") with feeding mode
+
+#This function performs a PGLS 
+#analysis of "proportion" and feeding 
+#mode. 
+
+pgls.proportion.scalarmodel<-gls(feedingtype~proportion, data=DF.scalarmodel, correlation=corBrownian(1,phy=pr.jetztree), method = "ML")
+summary(pgls.proportion.scalarmodel)
+
+
+```
+
