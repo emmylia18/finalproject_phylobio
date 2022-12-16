@@ -136,7 +136,7 @@ PGLS analysis of the four scalar variables with feeding mode reveals that "lengt
 
 
 
-![image](https://user-images.githubusercontent.com/90157894/208002744-b6052df0-9462-460e-adba-f275b3aff65a.png)
+![image](https://user-images.githubusercontent.com/90157894/208013729-e6d81bfc-ada0-4f84-9c14-c0cd60b829c1.png)
 
 **Figure 15**: The PGLS analysis of "proportion" and "feedingtype"
 
