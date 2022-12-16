@@ -155,4 +155,30 @@ If I did these analyses again, I would incorporate more variables. I would love 
 
 ## References
 
+Hessel AL, Nishikawa KC (2017). The Hip-twist Jump: A Unique Mechanism for Jumping in Lungless Salamanders. J Herpetol 51(4): 461-467.
 
+Howell, AB (1935). Morphogenesis of the Shoulder Architecture: Part III: Amphibia. Q Rev Biol 10(4):397-431.
+
+Jetz W, Pyron RA (2018). The interplay of past diversification and evolutionary isolation with present imperilment across the amphibian tree of life. Nat. Ecol. Evol 2:850-858.
+
+Keeffe RM, Blob RW, Blackburn DC, Mayer CJ (2022). XROMM Analysis of Feeding Mechanics in Toads: Interactions of the Tongue, Hyoid, and Pectoral Girdle. Integ Org Biol 4(1).
+
+Lombard RE, Wake DB (1976). Tongue Evolution in the Lungless Salamanders, Family Plethodontidae. J Morphol 148(3):265-286.
+
+McGonnell IM (2001). The evolution of the pectoral girdle. J Anat 199:189-194. 
+
+Paradis E, Schliep K (2019). “ape 5.0: an environment for modern phylogenetics and evolutionary analyses in R.” Bioinformatics 35:526-528.
+
+Pennell M, Eastman J, Slater G, Brown J, Uyeda J, Fitzjohn R, Alfaro M, Harmon L (2014). “geiger v2.0: an expanded suite of methods for fitting macroevolutionary models to phylogenetic trees.” Bioinformatics 30:2216-2218.
+
+Pinheiro J, Bates D, R Core Team (2022). nlme: Linear and Nonlinear Mixed Effects Models. R package version 3.1-161.
+
+Ryerson WG (2013). Jumping in the Salamander Desmognathus ocoee. Copeia 3:512-516.
+
+Scales J, Bloom SV, Deban SM (2020). Convergently evolved muscle architecture enables high-performance ballistic movement in salamanders. J Morphol 281:196-212. 
+
+Wake D, Deban SM (2000). Terrestrial Feeding in Salamanders. FEEDING: 95-116.
+
+Wickham H (2016). ggplot2: Elegant Graphics for Data Analysis. Springer-Verlag New York. ISBN 978-3-319-24277-4.
+
+Xie Y (2022). knitr: A General-Purpose Package for Dynamic Report Generation in R. R package version 1.41.
