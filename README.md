@@ -33,7 +33,7 @@ My scapula data was obtained from Morphosource. I requested approximately 20 CT 
 **Figure 2:** The 3D mesh of the scapula of *Ensatina eschscholtzii*, a ballistic feeder.
 
 
-After extracting the meshes, I used the program Blender to measure linear features along the surface of the scapula. In particular, I focused on the acromion process and the coracoid process, which are both major sites of muscle attachment in amphibians (Howell, 1935; McGonnell, 2001; Keeffe et al., 2022). Because skeletal attachment sites can reflect the size of the muscle(s) to which they’re attached, these varying surfaces provide an excellent proxy for assessing lunging capacity.
+After extracting the meshes, I used the program Blender to measure linear features along the surface of the scapula. In particular, I focused on the acromion process and the coracoid process, which are both major sites of muscle attachment in amphibians (Howell, 1935; McGonnell, 2001; Keeffe et al., 2022). Because skeletal attachment sites can reflect the size of the muscle(s) to which they’re attached, these varying surfaces provide an excellent proxy for assessing lunging capacity. All scapulae were introduced to VG Studio and Blender with size information, such that their relative sizes have not changed. Therefore, the scalar measurements retrieved from Blender are unitless.
 
 
 ![Untitled-labeled features](https://user-images.githubusercontent.com/90157894/207926424-5ea666fe-bbc9-4a3e-90b3-501e8265817e.png)
