@@ -143,11 +143,16 @@ PGLS analysis of the four scalar variables with feeding mode reveals that "lengt
 
 ## Discussion
 
-These results indicate...
+These results indicate a strong relationship between feeding mode and the length of the acromion process, as well as the flare between the acromion and coracoid processes. Based on the pruned tree with these variables plotted onto it, muscle-powered feeders tend to have larger values of both variables - they have longer acromion processes, and a greater distance between the tips of the acromion and coracoid proceses. These findings seem to support the hypothesis that muscle-powered feeders are better-adapted for lunging; larger skeletal attachment points allows for larger masses of muscle, which convey more power. 
 
-The biggest difficulty in implementing these analyses was...
+The results do not suggest a strong relationship between feeding mode and the angle between the two processes. This seems to indicate that scapula size may be evolving separately from scapula shape. Size benefits may be more important for muscular attachment than shape differences. 
 
-If I did these analyses again, I would...
+The biggest difficulty in implementing these analyses was, by far, formatting my data to work with the chosen packages. Throughout this project, I oscillated between using 3D landmark coordinates and scalar measurements of shape. I chose to use the scalar measurements for practicality - the methodology was more established and straight-forward, and more resources were available for guidance. Once I formatted the data correctly, the project was (mostly) smooth sailing.
+
+This project is, ultimately, still a work in progress. I'm presenting these findings at SICB in January 2023, and I hope to eventually use Dr. Morrison's landmarking package, "alignR". Going forward, I want to focus on getting usable data that describes the overall shape of the scapula, and isn't limited to the acromion and coracoid processes. My immediate next steps are to add an object that allows me to constrain the PGLS analyses for body size. Given that there is significant correlation with my linear measurements but not my angular measurement, the data may be confounded in some way by overall body size. I added the "proportion" variable as a temporary relativizer. The standard measurement of body size in salamanders is snout-ventral length (SVL), and that information must be requested from the museum collections directly. Because the PGLS for "proportion" and feeding mode indicated some slight correlation, I am optimistic that the "length" and "distance" variables will continue to be signficiant predictors after controlling for SVL.
+
+If I did these analyses again, I would incorporate more variables. I would love to have more information about other aspects of the pectoral girdle, for example, such as length or width of the long bones. I would also like to add more information about feeding itself - for example, does the type or mobility of prey impact lunging ability for lungless salamanders? Does scapula architecture correlate to the speed of prey? Ultimately, I would love to include more information that recenters the role of ecology. This is a very morphology-heavy investigation, and I want to emphasize that these aspects of physiology are not happening in a vacuum - that they occur in tandem with information about the environment, prey, predators, conspecifics, and other physiological features of the organism itself. If I could redo my investigation, I would emphasize the wide variety of constrains that could be influencing lunging capacity - beyond simply feeding mode.
 
 ## References
+
 
