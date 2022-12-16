@@ -160,3 +160,4 @@ LM=5
 IMAGE=C:\Users\18034\Pictures\IMG_5719[1422].jpg
 FeedingType=Ballistic
 ID=Thorius_boreas
+
