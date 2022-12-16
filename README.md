@@ -77,7 +77,7 @@ By combining the pruned *Plethodontidae* phylogeny with continuous trait data, I
 
 1. *Plot variation in scapula scalar data on the tips of a phylogeny*: I will use the package "ggplot2" to plot continuous scapula traits onto a known phylogeny to visually assess patterns between feeding mode and scapula shape.
 
-2. *Use phylogenetic generalized least-squares analysis to determine the correlation between feeding mode and various scapula features*: I will use the packages "nlme" and "geiger" to perform PGLS analyses on feeding mode as it correlates to scapula shape and size.
+2. *Use phylogenetic generalized least-squares analysis to determine the correlation between feeding mode and various scapula features*: I will use the packages "nlme" and "geiger" to perform PGLS analyses on feeding mode as it correlates to scapula shape and size. I will use a maximum likelihood model for the PGLS, and assume Brownian motion for evolution.
 
 
 ## Results
