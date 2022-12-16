@@ -157,7 +157,7 @@ If I did these analyses again, I would incorporate more variables. I would love 
 
 Hessel AL, Nishikawa KC (2017). The Hip-twist Jump: A Unique Mechanism for Jumping in Lungless Salamanders. J Herpetol 51(4): 461-467.
 
-Howell, AB (1935). Morphogenesis of the Shoulder Architecture: Part III: Amphibia. Q Rev Biol 10(4):397-431.
+Howell AB (1935). Morphogenesis of the Shoulder Architecture: Part III: Amphibia. Q Rev Biol 10(4):397-431.
 
 Jetz W, Pyron RA (2018). The interplay of past diversification and evolutionary isolation with present imperilment across the amphibian tree of life. Nat. Ecol. Evol 2:850-858.
 
