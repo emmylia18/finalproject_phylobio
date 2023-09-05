@@ -103,12 +103,12 @@ Next, I plotted the variables that describe scapula shape onto the tree. This in
 
 ![image](https://github.com/emmylia18/finalproject_phylobio/assets/90157894/1f0ed478-d790-456c-a1a8-21f86d44aa91)
 
-**Figure 10**: The angle between the acromion process and the coracoid process ("angle") plotted onto the pruned amphibian tree (Jetz & Pyron, 2018).
+**Figure 10**: The angle between the acromion process and the coracoid process ("angle") versus feeding mode.
 
 
 ![image](https://github.com/emmylia18/finalproject_phylobio/assets/90157894/0c14f1d5-a63d-49b1-bab7-d777976ef7c9)
 
-**Figure 11**: The distance between the tips of the acromion process and the coracoid process ("distance") plotted onto the pruned amphibian tree (Jetz & Pyron, 2018).
+**Figure 11**: The distance between the tips of the acromion process and the coracoid process ("distance") versus feeding mode.
 
 
 *Aim Two*
