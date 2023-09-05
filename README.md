@@ -1,20 +1,19 @@
-# Phylogenetic Biology - Final Project
 
 # Transitions in Plethodontidae Scapula Morphology
 
 ## Introduction and Goals
 
-For my final project, I plan to focus on salamanders in the family Plethodontidae. This family exhibits two feeding types, both of which involve tongue projection: muscle-powered feeding and spring-powered feeding (Lombard & Wake, 1976). Spring-powered or ballistic tongue projection, which relies on stored elastic energy, is comparatively more forceful than muscle-powered feeding (Scales 2020). In addition to these two feeding classes, some salamanders perform a forward lunge in tandem with tongue projection (Wake & Deban 2000). It is hypothesized that this forward lunge may provide additional power or accuracy to tongue projection. Some studies have explored the morphology involved in salamander jumping, but the adaptive benefit of the feeding lunge has not yet been confirmed (Ryerson, 2013; Hessel & Nishikawa, 2017).
+For my project, I plan to focus on salamanders in the family Plethodontidae. This family exhibits two feeding types, both of which involve tongue projection: muscle-powered feeding and spring-powered feeding (Lombard & Wake, 1976). Spring-powered or ballistic tongue projection, which relies on stored elastic energy, is comparatively more forceful than muscle-powered feeding (Scales 2020). In addition to these two feeding classes, some salamanders perform a forward lunge in tandem with tongue projection (Wake & Deban 2000). It is hypothesized that this forward lunge may provide additional power or accuracy to tongue projection. Some studies have explored the morphology involved in salamander jumping, but the adaptive benefit of the feeding lunge has not yet been confirmed (Ryerson, 2013; Hessel & Nishikawa, 2017).
 
-I spent the summer working in the Peabody Collections studying preserved salamander specimens. My research was focused on salamander forelimb architecture. I predicted that muscle-powered feeders may have forelimb structure that is better-optimized for forward lunges. In this sense, the forward lunge may be a compensatory mechanism for less powerful feeders.
+I spent the summer of 2022 working in the Peabody Collections studying preserved salamander specimens. My research was focused on salamander forelimb architecture. I predicted that muscle-powered feeders may have forelimb structure that is better-optimized for forward lunges. In this sense, the forward lunge may be a compensatory mechanism for less powerful feeders.
 
-To visualize differences in forelimb skeletal structure, I segmented ~20 different taxa within the family. Specifically, I focused on the scapula, humerus, radius, and ulna. To quantify differences in trait values, I plan to eventually use a geometric morphometrics program developed by Dr. Zachary Morris. For this investigation, I will be using linear measurements of different features along the scapulae. Therefore, I will be using my own data.
+To visualize differences in forelimb skeletal structure, I segmented ~20 different taxa within the family. Specifically, I focused on the scapula, humerus, radius, and ulna. To quantify differences in trait values, I plan to eventually use a geometric morphometrics program developed by Dr. Zachary Morris. For this investigation, I will be using linear measurements of different features along the scapulae.
 
 The goal of my project is to determine how forelimb morphology has evolved in Plethodontidae salamanders. I will use PGLS analysis to assess the correlation of feeding mode with scapula shape in lungless salamanders. Specifically, I will be considering the acromion and coracoid processes, two features that vary between scapulae (McGonnell, 2001).
 
 Ultimately, I would like to compare the evolutionary transition of forelimb morphology to the appearance of ballistic or muscle-powered feeding. With this comparison, it may become evident if natural selection is acting on optimized forelimb morphology for muscle-powered feeders, making the weakest feeders the best lungers.
 
-This is part of a larger project that I will present at SICB 2023.
+This is part of a larger project that I presented at SICB 2023.
 
 ## Methods
 
@@ -41,7 +40,7 @@ After extracting the meshes, I used the program Blender to measure linear featur
 **Figure 3:** The scapula of *Aneides lugubris* in the Blender interface. The acromion process and coracoid process are labeled. 
 
 
-I used three variables to summarize the shape of the acromion-coracoid projection: “length”, “angle”, and “distance”. “Length” refers to the length of the acromion process, measured from origin to tip. “Angle” refers to the approximate angle formed by the acromion process and coracoid process. This angle does not include any flaring or tapering that appears at the end of the processes. Lastly, “distance” describes the length of the space between the tip of the acromion process and the tip of the coracoid process. Therefore, it includes information about flaring that is not described by the “angle” variable.
+I used three variables to summarize the shape of the acromion-coracoid projection: “length”, “angle”, and “distance”. “Length” refers to the length of the acromion process, measured from origin to tip. “Angle” refers to the approximate angle formed by the acromion process and coracoid process. This angle does not include any flaring or tapering that appears at the end of the processes. Lastly, “distance” describes the length of the space between the tip of the acromion process and the tip of the coracoid process. Therefore, it includes information about flaring that is not described by the “angle” variable. I measured the SVL of each specimen in Blender to account for body size, then divided each linear variable by the specimen's SVL.
 
 I also incorporated the variable “proportion”, which is the value of “distance” divided by “length”. It is designed to assess the width of the entire acromion-coracoid projection relative to the length of the acromion. 
 
@@ -99,18 +98,17 @@ In order to plot scapula variation along a phylogeny, I began with a vector esta
 
 Next, I plotted the variables that describe scapula shape onto the tree. This includes "length" (**Figure 9**), "angle" (**Figure 10**), and "distance" (**Figure 11**). The "length" variable does not vary much along the phylogeny, though slightly larger length values seem characteristic of muscle-powered feeders. The "angle" variable does not change in a discernable way with feeding mode. *Bolitoglossa mexicana* has an exceptionally large angle, with a value over 100, compared to the other taxa. The "distance" variable also seems to skew slightly larger for the muscle-powered feeders.
 
-
-![image](https://user-images.githubusercontent.com/90157894/207951175-04d119f1-c5d6-4319-b27c-8b36b402f1a2.png)
+![image](https://github.com/emmylia18/finalproject_phylobio/assets/90157894/e36a41c0-f523-4a0d-9d98-51a6967a23aa)
 
 **Figure 9**: The length of the acromion process ("length") plotted onto the pruned amphibian tree (Jetz & Pyron, 2018).
 
 
-![image](https://user-images.githubusercontent.com/90157894/207951633-9699e1d0-666e-4752-8db2-ad1302700e7d.png)
+![image](https://github.com/emmylia18/finalproject_phylobio/assets/90157894/1f0ed478-d790-456c-a1a8-21f86d44aa91)
 
 **Figure 10**: The angle between the acromion process and the coracoid process ("angle") plotted onto the pruned amphibian tree (Jetz & Pyron, 2018).
 
 
-![image](https://user-images.githubusercontent.com/90157894/207951698-7a0f1e39-e3dd-4d07-8722-e45eeae6935f.png)
+![image](https://github.com/emmylia18/finalproject_phylobio/assets/90157894/0c14f1d5-a63d-49b1-bab7-d777976ef7c9)
 
 **Figure 11**: The distance between the tips of the acromion process and the coracoid process ("distance") plotted onto the pruned amphibian tree (Jetz & Pyron, 2018).
 
@@ -143,13 +141,11 @@ PGLS analysis of the four scalar variables with feeding mode reveals that "lengt
 
 ## Discussion
 
-These results indicate a strong relationship between feeding mode and the length of the acromion process, as well as the flare between the acromion and coracoid processes. Based on the pruned tree with these variables plotted onto it, muscle-powered feeders tend to have larger values of both variables - they have longer acromion processes, and a greater distance between the tips of the acromion and coracoid proceses. These findings seem to support the hypothesis that muscle-powered feeders are better-adapted for lunging; larger skeletal attachment points allows for larger masses of muscle, which convey more power. 
-
-The results do not suggest a strong relationship between feeding mode and the angle between the two processes. This seems to indicate that scapula size may be evolving separately from scapula shape. Size benefits may be more important for muscular attachment than shape differences. 
+These results indicate a strong relationship between feeding mode and the scapula shape across length, distance, and angle. Based on the pruned tree with these variables plotted onto it, muscle-powered feeders tend to have narrower values of all three variables - they have more consistent acromion processes and distances between the tips of the acromion and coracoid proceses. These findings seem to support the hypothesis that muscle-powered feeders are better-adapted for lunging; some selective pressure may be acting on the shape of the scapula to lead to higher consistency between species.
 
 The biggest difficulty in implementing these analyses was, by far, formatting my data to work with the chosen packages. Throughout this project, I oscillated between using 3D landmark coordinates and scalar measurements of shape. I chose to use the scalar measurements for practicality - the methodology was more established and straight-forward, and more resources were available for guidance. Once I formatted the data correctly, the project was (mostly) smooth sailing.
 
-This project is, ultimately, still a work in progress. I'm presenting these findings at SICB in January 2023, and I hope to eventually use Dr. Morrison's landmarking package, "alignR". Going forward, I want to focus on getting usable data that describes the overall shape of the scapula, and isn't limited to the acromion and coracoid processes. My immediate next steps are to add an object that allows me to constrain the PGLS analyses for body size. Given that there is significant correlation with my linear measurements but not my angular measurement, the data may be confounded in some way by overall body size. I added the "proportion" variable as a temporary relativizer. The standard measurement of body size in salamanders is snout-ventral length (SVL), and that information must be requested from the museum collections directly. Because the PGLS for "proportion" and feeding mode indicated some slight correlation, I am optimistic that the "length" and "distance" variables will continue to be signficiant predictors after controlling for SVL.
+This project is, ultimately, still a work in progress. I presented these findings at SICB in January 2023, and I hope to eventually use Dr. Morrison's landmarking package, "alignR". Going forward, I want to focus on getting usable data that describes the overall shape of the scapula, and isn't limited to the acromion and coracoid processes. 
 
 If I did these analyses again, I would incorporate more variables. I would love to have more information about other aspects of the pectoral girdle, for example, such as length or width of the long bones. I would also like to add more information about feeding itself - for example, does the type or mobility of prey impact lunging ability for lungless salamanders? Does scapula architecture correlate to the speed of prey? Ultimately, I would love to include more information that recenters the role of ecology. This is a very morphology-heavy investigation, and I want to emphasize that these aspects of physiology are not happening in a vacuum - that they occur in tandem with information about the environment, prey, predators, conspecifics, and other physiological features of the organism itself. If I could redo my investigation, I would emphasize the wide variety of constrains that could be influencing lunging capacity - beyond simply feeding mode.
 
