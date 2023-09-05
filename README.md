@@ -42,8 +42,6 @@ After extracting the meshes, I used the program Blender to measure linear featur
 
 I used three variables to summarize the shape of the acromion-coracoid projection: “length”, “angle”, and “distance”. “Length” refers to the length of the acromion process, measured from origin to tip. “Angle” refers to the approximate angle formed by the acromion process and coracoid process. This angle does not include any flaring or tapering that appears at the end of the processes. Lastly, “distance” describes the length of the space between the tip of the acromion process and the tip of the coracoid process. Therefore, it includes information about flaring that is not described by the “angle” variable. I measured the SVL of each specimen in Blender to account for body size, then divided each linear variable by the specimen's SVL.
 
-I also incorporated the variable “proportion”, which is the value of “distance” divided by “length”. It is designed to assess the width of the entire acromion-coracoid projection relative to the length of the acromion. 
-
 The variable of feeding mode was included binarily, such that a value of "0" indicates ballistic feeding and "1" indicates muscular feeding.
 
 
@@ -100,7 +98,7 @@ Next, I plotted the variables that describe scapula shape onto the tree. This in
 
 ![image](https://github.com/emmylia18/finalproject_phylobio/assets/90157894/e36a41c0-f523-4a0d-9d98-51a6967a23aa)
 
-**Figure 9**: The length of the acromion process ("length") plotted onto the pruned amphibian tree (Jetz & Pyron, 2018).
+**Figure 9**: The length of the acromion process ("length") versus feeding mode.
 
 
 ![image](https://github.com/emmylia18/finalproject_phylobio/assets/90157894/1f0ed478-d790-456c-a1a8-21f86d44aa91)
@@ -115,33 +113,30 @@ Next, I plotted the variables that describe scapula shape onto the tree. This in
 
 *Aim Two*
 
-PGLS analysis of the four scalar variables with feeding mode reveals that "length" and "distance" are positively correlated with feeding mode (p-value equals 0.0774 and 0.0554 respectively) (**Figures 12 & 13**). "Angle" has no correlation with feeding mode (p-value equals 0.5837) and "proportion" has some slight relationship with feeding mode, though it is not very strongly supported (p-value equals 0.3878) (**Figures 14 & 15**).
+None of the three variables are significantly different across species when performing a PGLS analysis.
 
 
-![image](https://user-images.githubusercontent.com/90157894/208002510-2f823130-57e3-42bc-ac29-4f07bcd33a46.png)
+![image](https://github.com/emmylia18/finalproject_phylobio/assets/90157894/53698292-5332-46fa-8349-d56fc69eaaf4)
 
 **Figure 12**: The PGLS analysis of "length" and "feedingtype"
 
 
-![image](https://user-images.githubusercontent.com/90157894/208002563-e6b94972-cdbe-4b39-a520-afe550a25e6e.png)
+![image](https://github.com/emmylia18/finalproject_phylobio/assets/90157894/acbf8c78-1cf7-47ee-9b77-4cbd938dc647)
 
 **Figure 13**: The PGLS analysis of "distance" and "feedingtype"
 
 
-![image](https://user-images.githubusercontent.com/90157894/208002604-b339f28c-3278-4edc-95e4-5b4b8abab987.png)
+![image](https://github.com/emmylia18/finalproject_phylobio/assets/90157894/a7604748-622c-4f3c-a733-48d2ceb83b46)
 
 **Figure 14**: The PGLS analysis of "angle" and "feedingtype"
 
 
 
-![image](https://user-images.githubusercontent.com/90157894/208013729-e6d81bfc-ada0-4f84-9c14-c0cd60b829c1.png)
-
-**Figure 15**: The PGLS analysis of "proportion" and "feedingtype"
-
-
 ## Discussion
 
 These results indicate a strong relationship between feeding mode and the scapula shape across length, distance, and angle. Based on the pruned tree with these variables plotted onto it, muscle-powered feeders tend to have narrower values of all three variables - they have more consistent acromion processes and distances between the tips of the acromion and coracoid proceses. These findings seem to support the hypothesis that muscle-powered feeders are better-adapted for lunging; some selective pressure may be acting on the shape of the scapula to lead to higher consistency between species.
+
+None of the PGLS analysis yielded statistically significant results. However, after viewing the violin plots developed through Aim 1, this begins to make more sense. Rather than establishing a difference in the mean of these values according to feeding mode, the main difference appears to be through variation - ballistic feeders exhibit far more variation in scapula shape than muscle powered feeders (Fig. 
 
 The biggest difficulty in implementing these analyses was, by far, formatting my data to work with the chosen packages. Throughout this project, I oscillated between using 3D landmark coordinates and scalar measurements of shape. I chose to use the scalar measurements for practicality - the methodology was more established and straight-forward, and more resources were available for guidance. Once I formatted the data correctly, the project was (mostly) smooth sailing.
 
